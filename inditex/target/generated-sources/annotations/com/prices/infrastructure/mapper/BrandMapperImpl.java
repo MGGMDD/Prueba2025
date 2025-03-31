@@ -1,6 +1,7 @@
 package com.prices.infrastructure.mapper;
 
 import com.prices.domain.model.Brand;
+import com.prices.domain.model.Brand.BrandBuilder;
 import com.prices.infrastructure.persistence.BrandEntity;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
@@ -31,11 +32,11 @@ public class BrandMapperImpl implements BrandMapper {
             return null;
         }
 
-        Brand brand = new Brand();
+        BrandBuilder brand = Brand.builder();
 
-        brand.setId( brandEntity.getId() );
-        brand.setBrandName( brandEntity.getBrandName() );
+        brand.id( brandEntity.getId() );
+        brand.brandName( brandEntity.getBrandName() );
 
-        return brand;
+        return brand.build();
     }
 }

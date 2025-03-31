@@ -1,7 +1,9 @@
 package com.prices.infrastructure.mapper;
 
 import com.prices.domain.model.Brand;
+import com.prices.domain.model.Brand.BrandBuilder;
 import com.prices.domain.model.Price;
+import com.prices.domain.model.Price.PriceBuilder;
 import com.prices.infrastructure.persistence.BrandEntity;
 import com.prices.infrastructure.persistence.PriceEntity;
 import javax.annotation.processing.Generated;
@@ -39,18 +41,18 @@ public class PriceMapperImpl implements PriceMapper {
             return null;
         }
 
-        Price price = new Price();
+        PriceBuilder price = Price.builder();
 
-        price.setId( priceEntity.getId() );
-        price.setBrand( brandEntityToBrand( priceEntity.getBrand() ) );
-        price.setStartDate( priceEntity.getStartDate() );
-        price.setEndDate( priceEntity.getEndDate() );
-        price.setProductId( priceEntity.getProductId() );
-        price.setPrice( priceEntity.getPrice() );
-        price.setPriority( priceEntity.getPriority() );
-        price.setCurr( priceEntity.getCurr() );
+        price.id( priceEntity.getId() );
+        price.brand( brandEntityToBrand( priceEntity.getBrand() ) );
+        price.startDate( priceEntity.getStartDate() );
+        price.endDate( priceEntity.getEndDate() );
+        price.productId( priceEntity.getProductId() );
+        price.price( priceEntity.getPrice() );
+        price.priority( priceEntity.getPriority() );
+        price.curr( priceEntity.getCurr() );
 
-        return price;
+        return price.build();
     }
 
     protected BrandEntity brandToBrandEntity(Brand brand) {
@@ -71,11 +73,11 @@ public class PriceMapperImpl implements PriceMapper {
             return null;
         }
 
-        Brand brand = new Brand();
+        BrandBuilder brand = Brand.builder();
 
-        brand.setId( brandEntity.getId() );
-        brand.setBrandName( brandEntity.getBrandName() );
+        brand.id( brandEntity.getId() );
+        brand.brandName( brandEntity.getBrandName() );
 
-        return brand;
+        return brand.build();
     }
 }
