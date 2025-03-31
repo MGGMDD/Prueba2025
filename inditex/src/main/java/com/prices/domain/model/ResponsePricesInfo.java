@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
  * The type Response prices info.
  */
 @Builder
+@Data
 public class ResponsePricesInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;

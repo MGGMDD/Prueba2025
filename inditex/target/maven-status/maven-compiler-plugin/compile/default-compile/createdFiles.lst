@@ -1,5 +1,6 @@
 com\prices\infrastructure\exception\GlobalExceptionHandler.class
 com\prices\application\model\ErrorData.class
+com\prices\infrastructure\mapper\BrandMapperImpl.class
 com\prices\domain\service\CalculatePriceService.class
 com\prices\infrastructure\rest\data\ResponsePricesInfoDto.class
 com\prices\infrastructure\respository\PriceJpaRepository.class
@@ -8,6 +9,7 @@ com\prices\infrastructure\mapper\PriceRestMapperImpl.class
 com\prices\application\usecases\CalculatePriceUseCase.class
 com\prices\infrastructure\persistence\BrandEntity.class
 com\prices\domain\model\Price.class
+com\prices\infrastructure\mapper\BrandMapper.class
 com\prices\infrastructure\rest\ApiUtil.class
 com\prices\application\exception\PriceNotFoundException.class
 com\prices\infrastructure\rest\PricesApi.class

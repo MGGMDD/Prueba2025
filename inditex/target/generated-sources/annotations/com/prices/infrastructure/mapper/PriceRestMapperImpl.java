@@ -19,6 +19,13 @@ public class PriceRestMapperImpl implements PriceRestMapper {
 
         ResponsePricesInfoDto responsePricesInfoDto = new ResponsePricesInfoDto();
 
+        responsePricesInfoDto.setProductId( responsePricesInfo.getProductId() );
+        responsePricesInfoDto.setBrandId( responsePricesInfo.getBrandId() );
+        responsePricesInfoDto.setPriceList( responsePricesInfo.getPriceList() );
+        responsePricesInfoDto.setStartDate( responsePricesInfo.getStartDate() );
+        responsePricesInfoDto.setEndDate( responsePricesInfo.getEndDate() );
+        responsePricesInfoDto.setFinalPrice( responsePricesInfo.getFinalPrice() );
+
         return responsePricesInfoDto;
     }
 }

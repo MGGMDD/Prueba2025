@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @Slf4j
 @RequiredArgsConstructor
 public class CalculatePriceService implements CalculatePriceUseCase {
-    private PricesRepository pricesRepository;
+    private final PricesRepository pricesRepository;
 
     @Override
     public ResponsePricesInfo callToPricesInfo(LocalDateTime applicationDate, Integer productId, Integer brandId) {

@@ -16,8 +16,8 @@ import java.time.LocalDateTime;
 @RestController
 @RequiredArgsConstructor
 public class PriceController  implements PricesApi {
-    private  CalculatePriceUseCase calculatePriceUseCase;
-    private  PriceRestMapper priceRestMapper;
+    private final CalculatePriceUseCase calculatePriceUseCase;
+    private final PriceRestMapper priceRestMapper;
 
     @Override
     public ResponseEntity<ResponsePricesInfoDto> _pricesInfo(LocalDateTime applicationDate, Integer productId, Integer brandId) {
