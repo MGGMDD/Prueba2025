@@ -8,7 +8,6 @@ import com.prices.infrastructure.respository.PriceJpaRepository;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-
 /**
  * The type Prices repository adapter.
  */

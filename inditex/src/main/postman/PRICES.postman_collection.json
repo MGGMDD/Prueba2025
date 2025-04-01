@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "25368a22-2000-4a57-8515-afcf9a95bbb5",
+		"name": "PRICES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9411007"
+	},
+	"item": [
+		{
+			"name": "PRICE NOT FOUND",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices?applicationDate=2020-06-15T15%3A30%3A00Z&productId=35456&brandId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices"
+					],
+					"query": [
+						{
+							"key": "applicationDate",
+							"value": "2020-06-15T15%3A30%3A00Z"
+						},
+						{
+							"key": "productId",
+							"value": "35456"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRICES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/prices?applicationDate=2020-06-15T15%3A30%3A00Z&productId=35456&brandId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prices"
+					],
+					"query": [
+						{
+							"key": "applicationDate",
+							"value": "2020-06-15T15%3A30%3A00Z"
+						},
+						{
+							"key": "productId",
+							"value": "35456"
+						},
+						{
+							"key": "brandId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

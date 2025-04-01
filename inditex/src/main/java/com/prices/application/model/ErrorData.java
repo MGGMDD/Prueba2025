@@ -7,6 +7,7 @@ import lombok.Data;
 /**
  * The type Error data.
  */
+@Data
 @Builder
 public class ErrorData {
     private String codResponse;

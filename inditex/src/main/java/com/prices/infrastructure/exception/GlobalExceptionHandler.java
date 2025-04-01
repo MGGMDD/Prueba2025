@@ -1,7 +1,8 @@
 package com.prices.infrastructure.exception;
-import com.prices.application.model.ErrorData;
+
 import com.prices.application.exception.CustomMethodArgumentNotValidException;
 import com.prices.application.exception.PriceNotFoundException;
+import com.prices.application.model.ErrorData;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
@@ -15,8 +16,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
-import static com.prices.application.model.ErrorData.*;
-
 /**
  * The type Global exception handler.
  */
@@ -25,7 +24,7 @@ import static com.prices.application.model.ErrorData.*;
 @Slf4j
 public class GlobalExceptionHandler {
 
-    private  MessageSource messageSource;
+    private final MessageSource messageSource;
 
     /**
      * Handle method argument not valid exception error data.
@@ -43,7 +42,6 @@ public class GlobalExceptionHandler {
                         .stream().map(FieldError::getField).collect(Collectors.joining(", "))).build();
     }
 
-
     /**
      * Handle price not found exception error data.
      *
@@ -55,9 +53,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(PriceNotFoundException.class)
     public ErrorData handlePriceNotFoundException(PriceNotFoundException ex, Locale locale) {
         String message = messageSource.getMessage("error.message.price.notfound", null, locale);
-        return ErrorData.builder().codResponse(CustomMethodArgumentNotValidException.ERROR_CODE)
+        return ErrorData.builder().codResponse(PriceNotFoundException.ERROR_CODE)
                 .descResponse(message).build();
     }
-
 
 }

@@ -14,7 +14,7 @@ import org.hibernate.validator.constraints.*;
 /**
  * ErrorResponseDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-04-01T11:52:23.937957900+02:00[Europe/Madrid]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-04-01T12:46:39.634055300+02:00[Europe/Madrid]")
 
 public class ErrorResponseDto  implements Serializable {
   private static final long serialVersionUID = 1L;
