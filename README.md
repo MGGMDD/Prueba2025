@@ -24,7 +24,6 @@ Tecnologías
 Configuración
 -------------
 Se ha tenido en cuenta a la hora de la configuracion de H2 que pueda ser usada de forma automatica por los scripts de Fliway.
-Los tests comparten H2 como base de datos para pruebas.
 - Url servicio: http://localhost:8080/prices
 - Consola h2: http://localhost:8080/h2-console
 - User: maria
